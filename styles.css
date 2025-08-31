@@ -101,6 +101,17 @@ body {
   margin: auto;
 }
 
+.form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 0.5rem;
+  gap: 15px;
+  position: relative;
+  height: 5rem;
+}
+
 .n1 {
   font-size: 51px;
   font-weight: 900;
@@ -108,7 +119,7 @@ body {
   text-align: center;
   width: 78%;
   margin-top: 150px;
-  line-height: 1.2;
+  line-height: 40px;
 }
 .n2 {
   font-size: 21px;
@@ -126,17 +137,6 @@ body {
   margin-bottom: 1rem;
 }
 
-.form-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  margin-top: 0.5rem;
-  gap: 15px;
-  position: relative;
-  height: 5rem;
-  width: 100%;
-}
 
 .email-input1 {
   height: 3.5rem;
@@ -180,6 +180,7 @@ body {
 .get-started1:hover {
   background-color: rgb(209, 0, 0);
 }
+
 
 .glow-curve {
   width: 100%;
@@ -922,7 +923,7 @@ width: 100%;
     margin-top: 50px;
   }
 }
-@media screen and (max-width: 4450px) {
+@media screen and (max-width: 450px) {
 
   .n1{
     font-size: 20px;
@@ -1003,4 +1004,83 @@ width: 100%;
    margin:0px 10px;
    padding:0px;
   }
+}
+
+/* FAQ Styling */
+.question-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 20px;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.question-header:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.question-header p {
+  margin: 0;
+  flex: 1;
+}
+
+.toggle-icon {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  transition: transform 0.3s ease;
+  margin-left: 20px;
+  flex-shrink: 0;
+}
+
+.ques.active .toggle-icon {
+  transform: rotate(45deg);
+}
+
+.answer {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  margin-top: 0;
+  border-top: 1px solid #333;
+  animation: slideDown 0.3s ease;
+  display: none;
+  width: 90%;
+  font-size: 20px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.answer p {
+  color: #fff;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ques {
+  border-bottom: 1px solid #333;
+  transition: all 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin-bottom: 1px;
+}
+
+.ques:last-child {
+  border-bottom: none;
+}
+
+.answer:hover {
+  background-color: rgba(255, 255, 255, 0.53);
 }
